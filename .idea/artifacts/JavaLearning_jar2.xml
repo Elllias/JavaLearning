@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaLearning:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaLearning_jar2</output-path>
+    <root id="archive" name="JavaLearning.jar">
+      <element id="module-output" name="JavaLearning" />
+    </root>
+  </artifact>
+</component>
