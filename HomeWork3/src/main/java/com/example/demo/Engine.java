@@ -17,7 +17,7 @@ public class Engine implements IEngine {
 
     @PreDestroy()
     public void preDestroy(){
-        System.out.println("Engine am destroyed");
+        System.out.println("Engine was destroyed");
     }
 
     @Override
