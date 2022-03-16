@@ -15,6 +15,7 @@ public class Moto {
         this.engine = engine;
     }
 
+    @Autowired
     public void setWheels(Wheels wheels){
         this.wheels = wheels;
     }
