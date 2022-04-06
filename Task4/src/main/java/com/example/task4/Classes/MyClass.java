@@ -17,7 +17,7 @@ public class MyClass {
     MyClass(){}
 
     @Bean
-    @ConditionalOnProperty(prefix = "config", name = "value", havingValue = "testValue")
+    @ConditionalOnProperty(prefix = "prefix", name = "config.value", havingValue = "testValue")
     private void a(){
         System.out.println("config.value = testValue!!");
     }
