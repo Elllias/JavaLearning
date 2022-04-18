@@ -1,4 +1,4 @@
-package com.example.task10.CONFIG;
+package com.example.task10.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

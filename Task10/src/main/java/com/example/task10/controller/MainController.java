@@ -1,4 +1,4 @@
-package com.example.task10.CONTROLLER;
+package com.example.task10.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,7 +23,7 @@ public class MainController {
                 .get(0)
                 .split("_")[1];
         var name = auth.getName();
-        return "<h2>Hello, " + name + "!</h2>\n<h2>Your roles: " + role + "</h2>";
+        return String.format("<h2>Hello, %s!</h2>\n<h2>Your roles: %s</h2>", role, name);
     }
 
     @GetMapping("/support/api")
@@ -34,6 +34,6 @@ public class MainController {
                 .get(0)
                 .split("_")[1];;
         var name = auth.getName();
-        return "<h2>Hello, " + name + "!</h2>\n<h2>Your roles: " + role + "</h2>";
+        return String.format("<h2>Hello, %s!</h2>\n<h2>Your roles: %s</h2>", role, name);
     }
 }
