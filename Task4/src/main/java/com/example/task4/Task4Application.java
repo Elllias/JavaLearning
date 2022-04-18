@@ -1,6 +1,6 @@
 package com.example.task4;
 
-import com.example.task4.Classes.MyClass;
+import com.example.task4.classes.MyClass;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

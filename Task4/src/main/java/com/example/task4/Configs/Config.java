@@ -1,30 +1,39 @@
-package com.example.task4.Configs;
+package com.example.task4.configs;
 
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 import javax.annotation.PostConstruct;
 
-
 @Configuration
 @ConfigurationProperties(prefix = "prefix")
-@Profile("!default")
 public class Config {
+
+    public Config() {
+    }
 
     @PostConstruct
     private void PostContructForDev(){
         System.out.println(name.toUpperCase() + " Config activated");
         System.out.println(list[0] + " " + list[1] + " " + list[2]);
-        System.out.println(configValue);
+        System.out.println(config);
     }
 
-    @Value("${prefix.list.values}")
     private String[] list;
-    @Value("${prefix.name}")
     private String name;
-    @Value("${prefix.config.value}")
-    private String configValue;
+    private String config;
+
+    public void setList(String[] list) {
+        this.list = list;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setConfig(String config) {
+        this.config = config;
+    }
 }

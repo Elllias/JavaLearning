@@ -1,15 +1,10 @@
-package com.example.task4.Classes;
+package com.example.task4.classes;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.ConstructorBinding;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-
-import java.util.Objects;
 
 @Component
 public class MyClass {
@@ -17,7 +12,7 @@ public class MyClass {
     MyClass(){}
 
     @Bean
-    @ConditionalOnProperty(prefix = "prefix", name = "config.value", havingValue = "testValue")
+    @Profile("test")
     private void a(){
         System.out.println("config.value = testValue!!");
     }
@@ -29,7 +24,7 @@ public class MyClass {
     }
 
     @Bean
-    @ConditionalOnExpression("!'${config.value}'.equals('default')")
+    @ConditionalOnExpression("!'default'.equals(environment['prefix.config'])")
     private void с(){
         System.out.println("Мы в не дефолтном бине, если что..");
     }
