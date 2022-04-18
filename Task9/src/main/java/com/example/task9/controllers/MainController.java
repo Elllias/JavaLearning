@@ -1,6 +1,6 @@
-package com.example.task9.Controllers;
+package com.example.task9.controllers;
 
-import com.example.task9.Annotation.TargetAnnotation;
+import com.example.task9.annotation.TargetAnnotation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

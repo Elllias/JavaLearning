@@ -1,4 +1,4 @@
-package com.example.task9.Annotation;
+package com.example.task9.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
